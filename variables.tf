@@ -14,6 +14,6 @@ variable "subnet_id" {
 
 variable "security_groups_id" {
   description = "Security Group Ids for EFS mount"
-  default     = "sg-0c5426001fd0fb679"
-  type        = string
+  default     = ["sg-0c5426001fd0fb679"]
+  type        = list(string)
 }
