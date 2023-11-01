@@ -1,3 +1,10 @@
+variable "region" {
+  description = "Region"
+  default     = "us-east-2"
+  type        = string
+}
+
+
 variable "subnet_id" {
   description = "Subnet deatials for EFS"
   default     = "subnet-0b86a94123ccf1094"
