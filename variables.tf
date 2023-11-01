@@ -7,13 +7,45 @@ variable "region" {
 
 variable "subnet_id" {
   description = "Subnet deatials for EFS"
-  default     = "subnet-0b86a94123ccf1094"
+  default     = ""
   type        = string
 }
 
 
-variable "security_groups_id" {
+variable "existing_security_groups_id" {
   description = "Security Group Ids for EFS mount"
-  default     = ["sg-0c5426001fd0fb679"]
+  default     = [""]
   type        = list(string)
 }
+
+
+variable "efs_tags" {
+    default = {
+      SubnetId             = ""
+      ExistingSG              = "test@hotstar.com"
+      Environment              = "test@hotstar.com"
+      ApplicationFunctionality                 = ""
+      ApplicationName                       = ""
+      ApplicationOwner            = ""
+      ApplicationTeam = "test@hotmail.com"
+      BackupSchedule                  = ""
+      BusinessOwner              = ""
+      BusinessTower             = ""
+      InstanceIP         = ""
+      Name                  = ""
+      OperatingSystem                    = ""
+      OperatingSystemSupportTeam            = ""
+      scheduler                   = ""
+      ServerProcess         = ""
+      ServerRoleType= ""
+      ServiceCriticality=""
+      TicketReference=""
+      DNSEntry=""
+      DesignDocumentLink=""
+    }
+    description = "Tags for Elastic File System"
+    type        = map(string)
+  }
+
+
+
