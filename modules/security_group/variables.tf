@@ -1,6 +1,6 @@
 variable "name" {
   description = "A list of new Security Group names to associate with EC2 instance."
-  type = list(string)
+  type = string
 
   }
 
