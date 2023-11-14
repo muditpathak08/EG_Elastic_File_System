@@ -33,7 +33,8 @@ resource "aws_security_group_rule" "ingress_rules" {
   protocol          = var.ingress_rules[count.index].protocol
   cidr_blocks       = [var.ingress_rules[count.index].cidr_block]
   description       = var.ingress_rules[count.index].description
-  security_group_id = module.aws_security_group.id[count.index]
+  # security_group_id = module.aws_security_group.id[count.index]
+  security_group_id = module.aws_security_group.id
 }
 
 
@@ -44,5 +45,5 @@ resource "aws_efs_mount_target" "efs-mt" {
 #    security_groups = [aws_security_group.efs.id]
 
    subnet_id = var.subnet_id
-   security_groups = module.aws_security_group.id
+   security_groups = [module.aws_security_group.id]
  }
