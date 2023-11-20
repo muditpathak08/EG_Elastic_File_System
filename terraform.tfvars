@@ -28,7 +28,7 @@ BusinessTower="abc@gmail.com"
 BusinessOwner="abc@gmail.com"
 ServiceCriticality="Medium"
 efs_name = "EG_EFS_Demo"
-throughput_mode="enhanced"
+throughput_mode="bursting"
 
 
 ingress_rules =[

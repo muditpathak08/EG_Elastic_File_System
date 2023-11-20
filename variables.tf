@@ -39,7 +39,7 @@ variable "efs_name" {
   default = "" 
 }
 
-
+#Throughput_mode to be one of ["bursting" "provisioned" "elastic"]
 variable "throughput_mode" {
   description = "Throughput Mode for the EFS"
   type        = string
