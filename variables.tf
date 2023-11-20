@@ -45,10 +45,6 @@ variable "throughput_mode" {
   type        = string
   default     = "bursting"
 
-  validation {
-   condition     = contains(["bursting", "enhanced"], var.throughput_mode)
-   error_message = "Please provide a valid throughput mode.Can either be bursting or enhanced"
- }
 }
 
 variable "ingress_rules" {
