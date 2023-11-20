@@ -1,7 +1,9 @@
 resource "aws_efs_file_system" "efs" {
+   name           = var.efs_name
    creation_token = "efs"
    performance_mode = "generalPurpose"
-   throughput_mode = "bursting"
+  #  throughput_mode = "bursting"
+   throughput_mode = var.throughput_mode
    encrypted = "true"
   tags = merge(tomap(var.efs_tags),{
       ApplicationOwner = var.ApplicationOwner, 

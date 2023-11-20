@@ -34,6 +34,23 @@ variable "secgroupdescription" {
   default = "Allow tcp to client host" 
 }
 
+variable "efs_name" {
+  type = string
+  default = "" 
+}
+
+
+variable "throughput_mode" {
+  description = "Throughput Mode for the EFS"
+  type        = string
+  default     = "bursting"
+
+  validation {
+   condition     = contains(["bursting", "enhanced"], var.throughput_mode)
+   error_message = "Please provide a valid throughput mode.Can either be bursting or enhanced"
+ }
+}
+
 variable "ingress_rules" {
   type = list(object({
     from_port   = number

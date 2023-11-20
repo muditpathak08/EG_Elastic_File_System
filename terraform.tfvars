@@ -27,15 +27,33 @@ BackupSchedule="DR7y"
 BusinessTower="abc@gmail.com"
 BusinessOwner="abc@gmail.com"
 ServiceCriticality="Medium"
+efs_name = "EG_EFS_Demo"
+throughput_mode="enhanced"
+
 
 ingress_rules =[
  
 {
-      from_port   = "2049"
-      to_port     = "2049"
+      from_port   = "80"
+      to_port     = "80"
       protocol    = "tcp"
       cidr_block  = "192.168.161.215/32"
-      description = "EFS Security Group"
+      description = "ELB"
+    },
+
+    {
+      from_port   = "8080"
+      to_port     = "8080"
+      protocol    = "tcp"
+      cidr_block  = "192.168.161.215/32"
+      description = "ELB Port 8080"
+    },
+{
+      from_port   = "1234"
+      to_port     = "1234"
+      protocol    = "tcp"
+      cidr_block  = "192.168.161.215/32"
+      description = "ELB Port 1234"
     }
 ]
 
