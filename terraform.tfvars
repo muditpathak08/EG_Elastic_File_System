@@ -1,9 +1,9 @@
 region = "us-east-2"
-vpc_id=""
+vpc_id="vpc-0419802ed12eec58a"
 subnet_id = "subnet-0b86a94123ccf1094"
 security_group_name="efs_sg"
 secgroupdescription="EFS Security Group"
-existing_security_groups_id = ["sg-0c5426001fd0fb679","sg-033170e1d5fe97eaa"]
+existing_security_groups_id = ["sg-0fa3f7060ad66d3be"]
 
 
 efs_tags = {
