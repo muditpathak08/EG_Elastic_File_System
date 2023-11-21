@@ -41,11 +41,11 @@ resource "aws_security_group_rule" "ingress_rules" {
 
 
 resource "aws_efs_mount_target" "efs-mt" {
-#    count = length(data.aws_availability_zones.available.names)
+   count = length(var.subnet_id)
    file_system_id  = aws_efs_file_system.efs.id
-#    subnet_id = aws_subnet.subnet[count.index].id
+   subnet_id = var.subnet_id[count.index]
 #    security_groups = [aws_security_group.efs.id]
 
-   subnet_id = var.subnet_id
+  #  subnet_id = var.subnet_id
    security_groups = [module.aws_security_group.id]
  }

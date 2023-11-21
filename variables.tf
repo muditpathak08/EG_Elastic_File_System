@@ -12,8 +12,8 @@ variable "vpc_id" {
 
 variable "subnet_id" {
   description = "Subnet deatials for EFS"
-  default     = ""
-  type        = string
+  default     = [""]
+  type        = list(string)
 }
 
 
