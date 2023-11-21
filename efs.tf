@@ -11,7 +11,6 @@ resource "aws_efs_file_system" "efs" {
       BackupSchedule =var.BackupSchedule,
       BusinessOwner = var.BusinessOwner,
       ServiceCriticality = var.ServiceCriticality,
-      Subnet-id = var.subnet_id,
       VPC-id = var.vpc_id})
  }
 
