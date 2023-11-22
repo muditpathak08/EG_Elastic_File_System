@@ -3,7 +3,7 @@ vpc_id="vpc-0419802ed12eec58a"
 subnet_id = ["subnet-0b86a94123ccf1094","subnet-04eff055558594bd7"]
 security_group_name="efs_sg"
 secgroupdescription="EFS Security Group"
-existing_security_groups_id = ["sg-0fa3f7060ad66d3be"]
+existing_security_groups_id = ["sg-07cf755b1aef6c22a"]
 
 
 efs_tags = {

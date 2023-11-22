@@ -46,5 +46,8 @@ resource "aws_efs_mount_target" "efs-mt" {
 #    security_groups = [aws_security_group.efs.id]
 
   #  subnet_id = var.subnet_id
-   security_groups = [module.aws_security_group.id]
+  #  security_groups = [module.aws_security_group.id]
+  security_groups = concat(module.aws_security_group.id,var.existing_security_groups_id[*])
  }
+
+   
