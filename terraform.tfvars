@@ -7,7 +7,7 @@ existing_security_groups_id = ["sg-0253d336f38d59e44"]
 
 
 efs_tags = {
-      Name         = "testFileSystem"
+      Name         = "testFileSystem" ## Name of the EC2 instance
       ApplicationFunctionality                 = "Test"
       ApplicationName                       = ""
       OperatingSystem = "Windows/Linux"
