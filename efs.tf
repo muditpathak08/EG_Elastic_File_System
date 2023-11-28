@@ -14,14 +14,6 @@ resource "aws_efs_file_system" "efs" {
       VPC-id = var.vpc_id})
  }
 
-# module "aws_security_group" {
-#   source      = "./modules/security_group"
-# #   sg_count = length(var.security_groups)
-#   name = var.security_group_name
-#   description = var.secgroupdescription
-#   vpc_id      = var.vpc_id
-
-# } 
 
 module "new_security_group" {
   source = "./modules/security_group_new"
@@ -29,21 +21,6 @@ module "new_security_group" {
   vpc_id = var.vpc_id
 }
 
-
-
-# resource "aws_security_group_rule" "ingress_rules" {
-
-#   count = length(var.ingress_rules)
-
-#   type              = "ingress"
-#   from_port         = var.ingress_rules[count.index].from_port
-#   to_port             = var.ingress_rules[count.index].to_port
-#   protocol          = var.ingress_rules[count.index].protocol
-#   cidr_blocks       = [var.ingress_rules[count.index].cidr_block]
-#   description       = var.ingress_rules[count.index].description
-#   # security_group_id = module.aws_security_group.id[count.index]
-#   security_group_id = module.aws_security_group.id
-# }
 
 
 resource "aws_efs_mount_target" "efs-mt" {
