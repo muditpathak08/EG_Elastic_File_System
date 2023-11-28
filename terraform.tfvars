@@ -2,6 +2,8 @@ region = "us-east-2"
 vpc_id="vpc-0419802ed12eec58a"
 subnet_id = ["subnet-0b86a94123ccf1094","subnet-04eff055558594bd7"]
 existing_security_groups_id = ["sg-0253d336f38d59e44"]
+
+##Name of the EFS
 efs_name="TestEFSDemo"
 
 
@@ -26,7 +28,6 @@ BackupSchedule="DR7y"
 BusinessTower="abc@gmail.com"
 BusinessOwner="abc@gmail.com"
 ServiceCriticality="Medium"
-efs_name = "EG_EFS_Demo"
 throughput_mode="bursting"
 
 
