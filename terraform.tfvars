@@ -4,7 +4,7 @@ subnet_id = ["subnet-0b86a94123ccf1094","subnet-04eff055558594bd7"]
 existing_security_groups_id = ["sg-0253d336f38d59e44"]
 
 ##Name of the EFS
-efs_name="TestEFSDemo"
+efs_name="TestEFSDemoNew"
 
 
 efs_tags = {
